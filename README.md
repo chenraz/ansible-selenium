@@ -1,7 +1,7 @@
 ## selenium [![Build Status](https://travis-ci.org/arknoll/ansible-role-selenium.svg?branch=master)](https://travis-ci.org/arknoll/ansible-role-selenium)
 
 Set up selenium and Firefox for running selenium tests.
-With github-gitlab integration
+With github-gitlab integration.
 #### Requirements
 
 * `java`
