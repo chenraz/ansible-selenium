@@ -1,0 +1,13 @@
+---
+- name: Converge
+  hosts: all
+  vars_files:
+    - ../../defaults/main.yml
+  become: true
+  pre_tasks:
+    - name: Update app
+      apt:
+        update_cache: true
+        name: gpg-agent
+  roles:
+    - role: selenium

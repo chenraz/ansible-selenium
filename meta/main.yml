@@ -1,0 +1,10 @@
+---
+# meta file for selenium
+galaxy_info:
+  author: Chen Raz
+  description: Set up selenium
+  license: license (GPL-2.0-or-later, MIT, etc)
+  min_ansible_version: 2.9
+dependencies:
+  - geerlingguy.java
+  - tmiller02.geckodriver

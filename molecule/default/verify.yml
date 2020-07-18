@@ -1,0 +1,14 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  vars_files:
+    - ../../defaults/main.yml
+  become: true
+  tasks:
+    - name: Register the selenium port
+      shell: 'systemctl status selenium | grep "port {{ selenium_port }}"'
+      when: "ansible_service_mgr == 'systemd'"
+      register: selenium_running
+      failed_when: selenium_running.rc > 0
